@@ -37,15 +37,17 @@ gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
 ## Alternativa: Ejecutar tu Web APP en VSCode
 
 1. Instalar los siguients paquetes:
-python -m pip install fastapi uvicorn[standard]
-python -m pip install pandas
-python -m pip install azure.storage.blob
+
+- python -m pip install fastapi uvicorn[standard]
+- python -m pip install pandas
+- python -m pip install azure.storage.blob
 
 2. Clonar el repo o bajar main.py
 3. Proporcionar los valores para las variables de entorno en lugar de utilizar las almacenadas en la web app:
-AZURE_CONNECTION_STRING ="DefaultEndpointsProtocol=++++" # recupera el valor en Tu cuenta de almacenamiento/Claves de acceso/Cadena de Conexión
-CONTAINER_NAME = "sensorespacientes" # nombre del contenedor que hayas creado
-API_KEY = "tucontraseña" # la que quieras utilizar para la ejecución
+
+- AZURE_CONNECTION_STRING ="DefaultEndpointsProtocol=++++" # recupera el valor en Tu cuenta de almacenamiento/Claves de acceso/Cadena de Conexión
+- CONTAINER_NAME = "sensorespacientes" # nombre del contenedor que hayas creado
+- API_KEY = "tucontraseña" # la que quieras utilizar para la ejecución
   
 4. Ejecutar la FastAPI con el siguiente comando en el terminal:
 http://127.0.0.1:8000/docs/
